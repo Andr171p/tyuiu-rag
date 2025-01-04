@@ -30,9 +30,10 @@ persist_directory = r"C:\Users\andre\TyuiuRAG\chromadb_data"
 db = Chroma.from_documents(
     split_docx,
     embedding,
-    client_settings=Settings(anonymized_telemetry=False),
+    persist_directory=persist_directory
+    # client_settings=Settings(anonymized_telemetry=False),
 )
-db.save_local("chroma_db")
+
 
 question = "Направления строительного института"
 docs = db.similarity_search(question, k=4)
