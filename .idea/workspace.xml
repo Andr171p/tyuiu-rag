@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 04.01.2025">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/chroma.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/embeddings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/embeddings/model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/embeddings/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TyuiuRAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TyuiuRAG.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromadb_data/chroma.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/chroma.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/chroma.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2r8JV6xVDkPnSKz7vv9MeJ4gbmp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -49,7 +46,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/andre/TyuiuRAG/documents"
+    "last_opened_file_path": "C:/Users/andre/TyuiuRAG"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -149,9 +146,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.chroma (1)" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python.chroma" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>

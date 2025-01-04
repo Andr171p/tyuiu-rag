@@ -9,16 +9,18 @@ from src.config import BASE_DIR
 
 from langchain.embeddings import HuggingFaceEmbeddings
 
+from src.embeddings.function import get_embeddings, ChromaEmbeddingFunction
+
 
 class ChromaDB:
     def __init__(
             self,
             path: str = str(BASE_DIR / "chromadb_data"),
     ) -> None:
-        self._chroma_db = Chroma(client=PersistentClient(path=path))
-
-    def query(self, query_embeddings: ...) -> ...:
-        return self._chroma_db.similarity_search(query_embeddings)
+        self._chroma_db = Chroma(
+            persist_directory=path,
+            embedding_function=get_embeddings()
+        )
 
     def similarity_search(
             self, query: str,
@@ -32,10 +34,10 @@ class ChromaDB:
 
 
 c = ChromaDB()
-model_name = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+'''model_name = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
 model_kwargs = {'device': 'cpu'}
 encode_kwargs = {'normalize_embeddings': False}
 embedding = HuggingFaceEmbeddings(model_name=model_name,
                                   model_kwargs=model_kwargs,
-                                  encode_kwargs=encode_kwargs)
-print(c.similarity_search("Прикладная информатика"))
+                                  encode_kwargs=encode_kwargs)'''
+print(c.similarity_search("Строин"))

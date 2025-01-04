@@ -33,7 +33,7 @@ db = Chroma.from_documents(
     persist_directory=persist_directory
     # client_settings=Settings(anonymized_telemetry=False),
 )
-
+db.persist()
 
 question = "Направления строительного института"
 docs = db.similarity_search(question, k=4)
