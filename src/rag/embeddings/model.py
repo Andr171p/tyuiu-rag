@@ -1,5 +1,6 @@
-from typing import Dict, List
+from typing import Dict
 
+from langchain_core.embeddings.embeddings import Embeddings
 from langchain.embeddings import HuggingFaceEmbeddings
 
 from src.config import settings
@@ -18,5 +19,5 @@ class EmbeddingsModel:
             encode_kwargs=encode_kwargs
         )
 
-    def embed_text(self, text: str) -> List[float]:
-        return self._model.encode([text])[0].tolist()
+    def __call__(self, *args, **kwargs) -> Embeddings:
+        return self._model

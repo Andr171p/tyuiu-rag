@@ -5,7 +5,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 # from langchain.vectorstores.faiss import FAISS
 
 from chromadb.config import Settings
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 
 
 text_splitter = RecursiveCharacterTextSplitter(
@@ -26,7 +26,7 @@ embedding = HuggingFaceEmbeddings(model_name=model_name,
                                   encode_kwargs=encode_kwargs)
 
 # vector_store = FAISS.from_documents(split_docx, embedding=embedding)
-persist_directory = r"C:\Users\andre\TyuiuRAG\chromadb_data"
+persist_directory = r"C:\Users\andre\TyuiuRAG\chroma"
 db = Chroma.from_documents(
     split_docx,
     embedding,

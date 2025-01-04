@@ -14,6 +14,8 @@ chromadb = "^0.6.1"
 lxml = "^5.3.0"
 sentence-transformers = "^3.3.1"
 fastapi = {extras = ["all"], version = "^0.115.6"}
+aiohttp = "^3.11.11"
+h2 = "^4.1.0"
 
 
 [build-system]
