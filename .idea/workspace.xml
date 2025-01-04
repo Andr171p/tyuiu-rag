@@ -4,15 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 04.01.2025">
-      <change afterPath="$PROJECT_DIR$/src/embeddings/function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TyuiuRAG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TyuiuRAG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromadb_data/chroma.sqlite3" beforeDir="false" />
+    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 04.01.2025 development">
+      <change afterPath="$PROJECT_DIR$/src/http/abc/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/abc/response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/response/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/response/json.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/response/text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http/utils/checker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/embeddings/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/generator/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/generator/credentials.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/generator/llm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rag/vector_store/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/chroma.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/chroma.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/chroma.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/vector_store/chroma.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/embeddings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/abc/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/embeddings/function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/embeddings/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/embeddings/model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +58,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.chroma (1).executor": "Run",
+    "Python.chroma (2).executor": "Run",
     "Python.config.executor": "Run",
+    "Python.credentials.executor": "Run",
     "Python.db.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -53,8 +72,12 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\TyuiuRAG\documents" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\TyuiuRAG\src\http\abc" />
+      <recent name="C:\Users\andre\TyuiuRAG\src\rag" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.chroma (1)">
+  <component name="RunManager" selected="Python.credentials">
     <configuration name="chroma (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAG" />
       <option name="ENV_FILES" value="" />
@@ -77,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="chroma" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="chroma (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAG" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,11 +109,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/database" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rag/vector_store" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\andre\TyuiuRAG\src\database\chroma.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rag/vector_store/chroma.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,6 +136,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/config.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="credentials" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuRAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rag/generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rag/generator/credentials.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,10 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.chroma (1)" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.credentials" />
         <item itemvalue="Python.config" />
-        <item itemvalue="Python.chroma" />
+        <item itemvalue="Python.chroma (2)" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.chroma (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -176,11 +222,20 @@
       <option name="project" value="LOCAL" />
       <updated>1735944196336</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[tyuiu-rag-llm] 04.01.2025 development">
+      <option name="closed" value="true" />
+      <created>1736002684510</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736002684510</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[tyuiu-rag-llm] 04.01.2025" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 04.01.2025" />
+    <MESSAGE value="[tyuiu-rag-llm] 04.01.2025 development" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 04.01.2025 development" />
   </component>
 </project>
