@@ -3,25 +3,26 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain_community.chat_models.gigachat import GigaChat
 from langchain_core.prompts import ChatPromptTemplate
 
+from src.rag.generator.abstract.llm import AbstractModel
 from src.rag.generator.credentials import GigaChatCredentials
 from src.misc.file import load_txt
 
 
-class GigaChatModel:
+class GigaChatModel(AbstractModel):
     def __init__(
             self,
             auth_key: str,
             model_name: str = "GigaChat:latest"
     ) -> None:
-        self.llm = GigaChat(
+        self._model = GigaChat(
             credentials=auth_key,
             model=model_name,
             verify_ssl_certs=False,
             profanity_check=False
         )
 
-    async def add_prompt(self) -> None:
-        ...
+    async def predict(self, text: str) -> str:
+        return await self._model.apredict(text)
 
 
 prompt = ChatPromptTemplate.from_template('''Ответь на вопрос пользователя. \

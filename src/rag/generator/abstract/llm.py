@@ -1,6 +1,8 @@
 from abc import ABC, abstractmethod
 
+from langchain_core.language_models.chat_models import BaseChatModel
 
-class AbstractLLM(ABC):
+
+class AbstractModel(ABC):
     @abstractmethod
-    def predict(self, text: str) -> str: pass
+    async def predict(self, text: str) -> str: pass
