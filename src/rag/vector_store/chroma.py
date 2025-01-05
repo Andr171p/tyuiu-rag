@@ -37,6 +37,6 @@ class ChromaDB:
         return embedding_retriever
 
 
-c = ChromaDB()
+'''c = ChromaDB()
 import asyncio
-print(asyncio.run(c.search_documents("Строин")))
+print(asyncio.run(c.search_documents("Строин")))'''
