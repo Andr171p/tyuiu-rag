@@ -1,6 +1,5 @@
 import uuid
 import base64
-import logging
 
 from src.http.client import HTTPClient
 from src.config import settings
@@ -24,7 +23,6 @@ class GigaChatCredentials:
         return base64.b64encode(credentials.encode("utf-8")).decode("utf-8")
 
     async def get_token(self, http_client: HTTPClient) -> ...:
-        import requests
         rq_uid = str(uuid.uuid4())
         auth_key: str = self.get_auth_key()
         headers = {
@@ -45,8 +43,3 @@ class GigaChatCredentials:
             print(response)
         except Exception as _ex:
             raise _ex
-
-
-import asyncio
-from src.http.response.json import JsonResponse
-asyncio.run(GigaChatCredentials().get_token(HTTPClient(JsonResponse())))

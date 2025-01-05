@@ -1,6 +1,7 @@
 from typing import List
 
 from langchain_core.documents.base import Document
+from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_community.vectorstores import Chroma
 
 from src.rag.embeddings.model import EmbeddingsModel
@@ -17,7 +18,7 @@ class ChromaDB:
             embedding_function=EmbeddingsModel()()
         )
 
-    async def search(
+    async def search_documents(
             self, query: str,
             k: int = 4
     ) -> List[Document]:
@@ -27,7 +28,15 @@ class ChromaDB:
         )
         return documents
 
+    def get_embedding_retriever(self, k: int = 5) -> VectorStoreRetriever:
+        embedding_retriever = self._chroma_db.as_retriever(
+            search_kwargs={
+                "k": k
+            }
+        )
+        return embedding_retriever
+
 
 c = ChromaDB()
 import asyncio
-print(asyncio.run(c.search("Строин")))
+print(asyncio.run(c.search_documents("Строин")))

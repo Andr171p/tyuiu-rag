@@ -1,7 +1,7 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import UnstructuredWordDocumentLoader
 from langchain.embeddings import HuggingFaceEmbeddings
-# from langchain.retrievers import BM25Retriever, EnsembleRetriever
+from langchain.retrievers import BM25Retriever, EnsembleRetriever
 # from langchain.vectorstores.faiss import FAISS
 
 from chromadb.config import Settings
@@ -38,3 +38,8 @@ db.persist()
 question = "Направления строительного института"
 docs = db.similarity_search(question, k=4)
 print(docs[0])
+
+
+bm25_retriever = BM25Retriever.from_documents(
+    ...
+)
