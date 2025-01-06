@@ -2,8 +2,8 @@ from typing import Optional, Dict, Any
 
 from httpx import AsyncClient
 
-from src.http.abc.client import AbstractClient
-from src.http.abc.response import AbstractResponse
+from src.http.abstract.client import AbstractClient
+from src.http.abstract.response import AbstractResponse
 
 
 class HTTPClient(AbstractClient):
