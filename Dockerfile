@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "src.api_v1.app:app", "--host", "0.0.0.0", "--port", "8000"]
