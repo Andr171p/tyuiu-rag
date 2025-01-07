@@ -1,8 +1,7 @@
-from src.api_v1.app import app
-from src.rag.abstract import AbstractChain, AbstractBuilder
+from src.api_v1.container import rag_builder
+from src.rag.abstract import AbstractChain
 
 
 def get_rag_chain() -> AbstractChain:
-    rag_builder: AbstractBuilder = app.state.rag_builder
     rag_chain: AbstractChain = rag_builder.get_rag_chain()
     return rag_chain

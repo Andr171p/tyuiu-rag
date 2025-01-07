@@ -4,23 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 07.01.2025 add app lifespan">
-      <change afterPath="$PROJECT_DIR$/src/api_v1/routers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api_v1/routers/rag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rag/abstract/builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/schemas/answer.py" afterDir="false" />
+    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 08.01.2025">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/dependencies/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/dependencies/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/dependencies/rag.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/dependencies/rag.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api_v1/lifespan.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/lifespan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/abstract/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/abstract/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/retriever/embeddings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/retriever/embeddings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api_v1/routers/rag.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/routers/rag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/container.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/abstract/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/abstract/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/abstract/response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/response/text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/utils/checker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/file.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +302,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736250458834</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[tyuiu-rag-llm] 07.01.2025 crete api_v1 module">
+      <option name="closed" value="true" />
+      <created>1736272638516</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736272638516</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[tyuiu-rag-llm] 08.01.2025">
+      <option name="closed" value="true" />
+      <created>1736277451934</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1736277451934</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -314,6 +333,8 @@
     <MESSAGE value="[tyuiu-rag-llm] 07.01.2025" />
     <MESSAGE value="[tyuiu-rag-llm] 07.01.2025 rag" />
     <MESSAGE value="[tyuiu-rag-llm] 07.01.2025 add app lifespan" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 07.01.2025 add app lifespan" />
+    <MESSAGE value="[tyuiu-rag-llm] 07.01.2025 crete api_v1 module" />
+    <MESSAGE value="[tyuiu-rag-llm] 08.01.2025" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 08.01.2025" />
   </component>
 </project>
