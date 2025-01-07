@@ -25,7 +25,7 @@ embedding = HuggingFaceEmbeddings(model_name=model_name,
                                   model_kwargs=model_kwargs,
                                   encode_kwargs=encode_kwargs)
 
-# vector_store = FAISS.from_documents(split_docx, embedding=embedding)
+# retriever = FAISS.from_documents(split_docx, embedding=embedding)
 persist_directory = r"C:\Users\andre\TyuiuRAG\chroma"
 db = Chroma.from_documents(
     split_docx,

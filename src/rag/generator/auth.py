@@ -1,9 +1,10 @@
 import base64
 
+from src.rag.abstract.auth import AbstractAuth
 from src.config import settings
 
 
-class GigaChatAuth:
+class GigaChatAuth(AbstractAuth):
     def __init__(
             self,
             client_id: str = settings.giga_chat.client_id,

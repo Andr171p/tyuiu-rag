@@ -11,11 +11,11 @@ class RAGChain(AbstractChain):
     def __init__(
             self,
             retriever: VectorStoreRetriever,
-            documents_chain: Runnable
+            llm_chain: Runnable
     ) -> None:
         self._chain: Runnable = create_retrieval_chain(
             retriever=retriever,
-            combine_docs_chain=documents_chain
+            combine_docs_chain=llm_chain
         )
 
     async def invoke(self, query: str) -> str:

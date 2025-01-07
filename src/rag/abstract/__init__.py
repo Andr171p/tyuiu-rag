@@ -1,11 +1,13 @@
 __all__ = (
-    "AbstractVectorStore",
+    "AbstractEmbeddingsFactory",
+    "AbstractRetriever",
     "AbstractAuth",
     "AbstractChain",
-    "AbstractModel"
+    "AbstractLLM"
 )
 
-from src.rag.abstract.vector_store import AbstractVectorStore
+from src.rag.abstract.embeddings import AbstractEmbeddingsFactory
+from src.rag.abstract.retriever import AbstractRetriever
 from src.rag.abstract.auth import AbstractAuth
-from src.rag.abstract.llm import AbstractModel
+from src.rag.abstract.llm import AbstractLLM
 from src.rag.abstract.chain import AbstractChain

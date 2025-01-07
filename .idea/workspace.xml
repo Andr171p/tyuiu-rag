@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 06.01.2025 interfaces for generator">
-      <change afterPath="$PROJECT_DIR$/src/rag/generator/abstract/credentials.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rag/generator/factory.py" afterDir="false" />
+    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 07.01.2025">
+      <change afterPath="$PROJECT_DIR$/src/rag/retriever/chroma.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/generator/abstract/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/generator/abstract/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/generator/abstract/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/generator/abstract/llm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rag/generator/credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/generator/credentials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/tyuiu-rag.docx" beforeDir="false" afterPath="$PROJECT_DIR$/static/docs/tyuiu-rag.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/abstract/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/abstract/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/abstract/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/abstract/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/abstract/vector_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/abstract/retriever.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/chain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/chain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/abstract/embeddings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/chain/auth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/chain/embeddings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/chain/llm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/chain/vector_store.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/embeddings/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/retriever/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/embeddings/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/generator/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/generator/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/rag/generator/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/generator/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/vector_store/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/rag/retriever/embeddings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rag/vector_store/chroma.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.builder.executor": "Run",
     "Python.chroma (1).executor": "Run",
     "Python.chroma (2).executor": "Run",
     "Python.config.executor": "Run",
@@ -47,6 +61,7 @@
     "Python.file.executor": "Run",
     "Python.llm.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.model.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/andre/TyuiuProjectParser"
@@ -57,56 +72,13 @@
       <recent name="C:\Users\andre\TyuiuRAG\documents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\TyuiuRAG\static\docs" />
       <recent name="C:\Users\andre\TyuiuRAG\src\http\abc" />
       <recent name="C:\Users\andre\TyuiuRAG\src\rag" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.llm">
-    <configuration name="chroma (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TyuiuRAG" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rag/vector_store" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rag/vector_store/chroma.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TyuiuRAG" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/config.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="credentials" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.model">
+    <configuration name="auth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TyuiuRAG" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,7 +91,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rag/generator/credentials.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\andre\TyuiuRAG\src\rag\generator\auth.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="builder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuRAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rag" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rag/builder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,13 +166,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TyuiuRAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/rag/llm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/rag/llm/model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.model" />
+        <item itemvalue="Python.builder" />
         <item itemvalue="Python.llm" />
         <item itemvalue="Python.file" />
-        <item itemvalue="Python.credentials" />
-        <item itemvalue="Python.config" />
-        <item itemvalue="Python.chroma (2)" />
+        <item itemvalue="Python.auth" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +270,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736109975449</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[tyuiu-rag-llm] 06.01.2025 generator factory">
+      <option name="closed" value="true" />
+      <created>1736113740757</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736113740757</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[tyuiu-rag-llm] 07.01.2025">
+      <option name="closed" value="true" />
+      <created>1736197708095</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736197708095</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -265,6 +297,8 @@
     <MESSAGE value="[tyuiu-rag-llm] 05.01.2025 add misc" />
     <MESSAGE value="[tyuiu-rag-llm] 06.01.2025 first RAG" />
     <MESSAGE value="[tyuiu-rag-llm] 06.01.2025 interfaces for generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 06.01.2025 interfaces for generator" />
+    <MESSAGE value="[tyuiu-rag-llm] 06.01.2025 generator factory" />
+    <MESSAGE value="[tyuiu-rag-llm] 07.01.2025" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 07.01.2025" />
   </component>
 </project>

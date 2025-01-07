@@ -1,34 +1,42 @@
-from typing import Optional
+from typing import (
+    TYPE_CHECKING,
+    Optional
+)
 
 from src.rag.abstract import (
-    AbstractVectorStore,
+    AbstractEmbeddingsFactory,
     AbstractAuth,
-    AbstractModel,
     AbstractChain
 )
+from src.rag.retriever.chroma import ChromaRetriever
+from src.rag.generator.llm import GigaChatLLM
 from src.rag.chain import RAGChain
 
-from langchain_core.runnables.base import Runnable
-from langchain_core.vectorstores import VectorStoreRetriever
+if TYPE_CHECKING:
+    from langchain_core.runnables.base import Runnable
+    from langchain_core.vectorstores import VectorStoreRetriever
 
 
 class RAGBuilder:
-    __slots__ = ("_embedding_retriever", "_documents_chain")
+    __slots__ = ("_retriever", "_llm_chain")
 
     def __init__(self) -> None:
-        self._embedding_retriever: Optional[VectorStoreRetriever] = None
-        self._documents_chain: Optional[Runnable] = None
+        self._retriever: Optional["VectorStoreRetriever"] = None
+        self._llm_chain: Optional["Runnable"] = None
 
-    def set_vector_store(self, vector_store: AbstractVectorStore) -> None:
-        self._embedding_retriever = vector_store.get_embeddings_retriever()
+    def set_retriever(self, embeddings_factory: AbstractEmbeddingsFactory) -> None:
+        embeddings_model = embeddings_factory.create_embeddings_model()
+        chroma = ChromaRetriever(embeddings_model)
+        self._retriever = chroma.get_embeddings_retriever()
 
-    def set_llm(self,  model: AbstractModel, template: str) -> None:
-        self._documents_chain = model.create_documents_chain(template)
+    def set_llm_chain(self,  auth: AbstractAuth, template: str) -> None:
+        llm = GigaChatLLM(auth)
+        self._llm_chain = llm.create_llm_chain(template)
 
     def get_rag_chain(self) -> AbstractChain | None:
         if not all(getattr(self, attr) for attr in self.__slots__):
             raise ValueError("not all attributes are set")
         return RAGChain(
-            retriever=self._embedding_retriever,
-            documents_chain=self._documents_chain
+            retriever=self._retriever,
+            llm_chain=self._llm_chain
         )
