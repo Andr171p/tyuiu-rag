@@ -32,7 +32,13 @@ class GigaChatSettings(BaseSettings):
     prompt: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
 
 
+class APISettings(BaseSettings):
+    name: str = "RAG GigaChat API"
+    prefix: str = "/api/v1"
+
+
 class Settings(BaseSettings):
+    api_v1: APISettings = APISettings()
     embeddings: EmbeddingsSettings = EmbeddingsSettings()
     chroma: ChromaSettings = ChromaSettings()
     giga_chat: GigaChatSettings = GigaChatSettings()

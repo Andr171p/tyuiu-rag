@@ -44,22 +44,3 @@ class RAGBuilder(AbstractBuilder):
             llm_chain=self._llm_chain
         )
 
-
-'''from src.rag.retriever.embeddings import EmbeddingsFactory
-from src.rag.generator.auth import GigaChatAuth
-from src.misc.file import load_txt
-from src.config import settings
-async def main() -> None:
-    print(settings.giga_chat.prompt)
-    template = await load_txt(r"C:\Users\andre\TyuiuRAG\static\prompt\chat.txt")
-    rag_builder = (
-        RAGBuilder()
-        .set_retriever(EmbeddingsFactory())
-        .set_llm_chain(GigaChatAuth(), template)
-    )
-    rag_chain = rag_builder.get_rag_chain()
-    print(await rag_chain.invoke("Расскажи о ТИУ"))
-
-
-import asyncio
-asyncio.run(main())'''
