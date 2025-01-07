@@ -24,14 +24,16 @@ class RAGBuilder:
         self._retriever: Optional["VectorStoreRetriever"] = None
         self._llm_chain: Optional["Runnable"] = None
 
-    def set_retriever(self, embeddings_factory: AbstractEmbeddingsFactory) -> None:
+    def set_retriever(self, embeddings_factory: AbstractEmbeddingsFactory) -> "RAGBuilder":
         embeddings_model = embeddings_factory.create_embeddings_model()
         chroma = ChromaRetriever(embeddings_model)
         self._retriever = chroma.get_embeddings_retriever()
+        return self
 
-    def set_llm_chain(self,  auth: AbstractAuth, template: str) -> None:
+    def set_llm_chain(self,  auth: AbstractAuth, template: str) -> "RAGBuilder":
         llm = GigaChatLLM(auth)
         self._llm_chain = llm.create_llm_chain(template)
+        return self
 
     def get_rag_chain(self) -> AbstractChain | None:
         if not all(getattr(self, attr) for attr in self.__slots__):
