@@ -29,10 +29,7 @@ class GigaChatSettings(BaseSettings):
     scope: str = os.getenv("GIGACHAT_API_PERS")
     url: str = os.getenv("AUTH_URL")
 
-    class PromptSettings(BaseSettings):
-        path: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
-
-    prompt: PromptSettings = PromptSettings()
+    prompt: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
 
 
 class Settings(BaseSettings):

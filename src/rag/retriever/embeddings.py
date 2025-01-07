@@ -3,7 +3,8 @@ from typing import (
     Dict
 )
 
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.embeddings import HuggingFaceEmbeddings
 
 from src.rag.abstract.embeddings import AbstractEmbeddingsFactory
 from src.config import settings
