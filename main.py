@@ -13,7 +13,7 @@ text_splitter = RecursiveCharacterTextSplitter(
     chunk_overlap=100
 )
 
-loader = UnstructuredWordDocumentLoader(r"C:\Users\andre\TyuiuRAG\documents\tyuiu-rag.docx")
+loader = UnstructuredWordDocumentLoader(r"C:\Users\andre\TyuiuRAG\static\docs\ТИУ основная информация.docx")
 split_docx = loader.load_and_split(text_splitter)
 
 # print(split_docx[1])
@@ -40,6 +40,6 @@ docs = db.similarity_search(question, k=4)
 print(docs[0])
 
 
-bm25_retriever = BM25Retriever.from_documents(
+'''bm25_retriever = BM25Retriever.from_documents(
     ...
-)
+)'''
