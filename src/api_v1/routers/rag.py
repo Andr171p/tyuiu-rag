@@ -18,7 +18,7 @@ rag_router = APIRouter(
 )
 
 
-@rag_router.post(path="/answer/", response_model=AnswerResponse)
+@rag_router.get(path="/answer/", response_model=AnswerResponse)
 async def get_rag_answer(
         query: str = Query(...),
         rag_chain: AbstractChain = Depends(get_rag_chain)
