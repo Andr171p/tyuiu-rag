@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 09.01.2025">
-      <change afterPath="$PROJECT_DIR$/static/docs/ТИУ основная информация old.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="5cdafcd0-2d54-44af-ab4d-b2ae1aa79aac" name="Changes" comment="[tyuiu-rag-llm] 10.01.2025 new requirements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api_v1/container/rag.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api_v1/container/rag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/docs/ТИУ основная информация.docx" beforeDir="false" afterPath="$PROJECT_DIR$/static/docs/ТИУ основная информация.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +328,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736373620766</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[tyuiu-rag-llm] 09.01.2025 new docs">
+      <option name="closed" value="true" />
+      <created>1736389876159</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1736389876159</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[tyuiu-rag-llm] 10.01.2025 new requirements">
+      <option name="closed" value="true" />
+      <created>1736495689937</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1736495689937</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -352,6 +364,8 @@
     <MESSAGE value="[tyuiu-rag-llm] 08.01.2025 add rag builder dependency" />
     <MESSAGE value="[tyuiu-rag-llm] 08.01.2025 replace app path" />
     <MESSAGE value="[tyuiu-rag-llm] 09.01.2025" />
-    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 09.01.2025" />
+    <MESSAGE value="[tyuiu-rag-llm] 09.01.2025 new docs" />
+    <MESSAGE value="[tyuiu-rag-llm] 10.01.2025 new requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="[tyuiu-rag-llm] 10.01.2025 new requirements" />
   </component>
 </project>
