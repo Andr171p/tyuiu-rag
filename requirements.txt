@@ -1,4 +1,6 @@
 langchain~=0.3.14
+gigachain-community~=0.2.16.post3
+sentence-transformers~=3.3.1
 httpx~=0.28.1
 aiofiles~=24.1.0
 python-dotenv~=1.0.1
