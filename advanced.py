@@ -1,3 +1,7 @@
+from typing import Iterable, Any
+
+from langchain_core.documents import Document
+
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import TextLoader
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -38,6 +42,9 @@ embeddings = MyEmbeddingsModel()
 db = Chroma.from_documents(texts, embeddings)
 '''docs = db.similarity_search("Расскажи про дополнительные баллы")
 print(docs[0])'''
+
+
+
 
 chroma_retriever = db.as_retriever(search_kwargs={"k": 5})
 bm25 = BM25Retriever.from_documents(texts)

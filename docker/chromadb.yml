@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  chromadb:
+    image: chromadb/chroma
+    ports:
+      - "8000:8000"
+    environment:
+      CHROMA_DB_TYPE: postgres
+      CHROMA_DB_CONNECTION_URI: postgresql://postgres:password@db/chromadb
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:14
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: chromadb
+    restart: always
+
+volumes:
+  pgdata:

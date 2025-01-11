@@ -1,19 +1,22 @@
-from chromadb import HttpClient
+from typing import TYPE_CHECKING, Any
+
+from chromadb import AsyncHttpClient
 from chromadb.config import Settings
+from langchain_community.vectorstores import Chroma
+
+if TYPE_CHECKING:
+    from langchain_core.embeddings import Embeddings
 
 
-class ChromaVectorStore:
+class ChromaVectorStore(Chroma):
     def __init__(
             self,
-            host: str,
-            port: int,
-            settings: Settings
+            embeddings: "Embeddings",
+            client: Any = AsyncHttpClient(),
+            settings: Settings = Settings()
     ) -> None:
-        self._chroma_db = HttpClient(
-            host=host,
-            port=port,
-            settings=settings
+        super().__init__(
+            client=client,
+            client_settings=settings,
+            embedding_function=embeddings
         )
-
-    def add_documents(self, documents, embeddings) -> None:
-        self._chroma_db.fro

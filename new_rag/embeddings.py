@@ -3,7 +3,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from src.config import settings
 
 
-class E5BaseEmbeddingsModel(HuggingFaceEmbeddings):
+class EmbeddingsModel(HuggingFaceEmbeddings):
     model_config = {
         "model_name": settings.embeddings.model_name,
         "model_kwargs": settings.embeddings.model_kwargs,
