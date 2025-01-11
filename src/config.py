@@ -13,7 +13,8 @@ load_dotenv(ENV_PATH)
 
 
 class EmbeddingsSettings(BaseSettings):
-    model_name: str = os.getenv("EMBEDDINGS_MODEL_NAME")
+    # model_name: str = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+    model_name: str = "d0rj/e5-base-en-ru"
     model_kwargs: Dict[str, str] = {"device": "cpu"}
     encode_kwargs: Dict[str, bool] = {'normalize_embeddings': False}
 

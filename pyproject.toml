@@ -18,6 +18,7 @@ aiohttp = "^3.11.11"
 h2 = "^4.1.0"
 pydantic = "^2.10.4"
 injector = "^0.22.0"
+chroma-migrate = "^0.0.7"
 
 
 [build-system]
