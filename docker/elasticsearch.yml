@@ -2,17 +2,21 @@ version: '3.7'
 
 services:
   elasticsearch:
-    image: elasticsearch:8.4.2
-    container_name: elasticsearch
+    image: elasticsearch:7.16.1
+    volumes:
+      - ./configs/elasticsearch/config.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      - ./volumes/elasticsearch/data:/usr/share/elasticsearch/data
     environment:
-      - discovery.type=single-node
-      - ES_JAVA_OPTS=-Xms1g -Xmx1g
-      - "http.host=0.0.0.0"
+      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      ELASTIC_USERNAME: "elastic"
+      ELASTIC_PASSWORD: "MyPw123"
+      discovery.type: single-node
+    networks:
+      - elk
     ports:
       - "9200:9200"
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
+      - "9300:9300"
 
-volumes:
-  esdata:
-    driver: local
+networks:
+  elk:
+    driver: bridge

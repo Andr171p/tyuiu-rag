@@ -44,8 +44,6 @@ db = Chroma.from_documents(texts, embeddings)
 print(docs[0])'''
 
 
-
-
 chroma_retriever = db.as_retriever(search_kwargs={"k": 5})
 bm25 = BM25Retriever.from_documents(texts)
 retriever = EnsembleRetriever(

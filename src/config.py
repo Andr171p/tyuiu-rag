@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from typing import Literal, Dict
+from typing import Dict
 from pydantic_settings import BaseSettings
 
 
@@ -20,7 +20,18 @@ class EmbeddingsSettings(BaseSettings):
 
 
 class ChromaSettings(BaseSettings):
-    collection_name: Literal["tyuiu-documents"] = "tyuiu-documents"
+    host: str = "localhost"
+    port: int = 8000
+
+
+class ElasticSearchSettings(BaseSettings):
+    host: str = "localhost"
+    port: int = 9200
+    username: str = "elastic"
+    password: str = "MyPw123"
+
+    url: str = f"http://{username}:{password}@{host}:{port}"
+    index_name: str = "tyuiu-index"
 
 
 class GigaChatSettings(BaseSettings):
@@ -30,6 +41,7 @@ class GigaChatSettings(BaseSettings):
     scope: str = os.getenv("GIGACHAT_API_PERS")
     url: str = os.getenv("AUTH_URL")
 
+    model_name: str = "GigaChat:latest"
     prompt: Path = BASE_DIR / "static" / "prompt" / "chat.txt"
 
 
@@ -42,6 +54,7 @@ class Settings(BaseSettings):
     api_v1: APISettings = APISettings()
     embeddings: EmbeddingsSettings = EmbeddingsSettings()
     chroma: ChromaSettings = ChromaSettings()
+    es: ElasticSearchSettings = ElasticSearchSettings()
     giga_chat: GigaChatSettings = GigaChatSettings()
 
 
