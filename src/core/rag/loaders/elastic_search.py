@@ -29,5 +29,8 @@ class ElasticSearchLoader:
             }
             yield doc
 
-    async def load_documents(self, documents: List[Document]) -> None:
+    async def load_documents(
+            self,
+            documents: List[Document]
+    ) -> None:
         await async_bulk(self._client, self._generate_documents(documents))

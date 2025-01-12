@@ -1,7 +1,7 @@
 from src.rag.builder import RAGBuilder
 from src.rag.retriever.embeddings import EmbeddingsFactory
 from src.rag.generator.auth import GigaChatAuth
-from src.misc.file import load_txt
+from src.misc.loaders import load_txt
 from src.config import settings
 
 
