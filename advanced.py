@@ -23,7 +23,14 @@ text_splitter = RecursiveCharacterTextSplitter(
 
 texts = text_splitter.create_documents([big_doc])
 
-model_name = "d0rj/e5-base-en-ru"
+from new_rag.retrievers.elastic_search import ElasticSearchRetrieverFactory
+esr = ElasticSearchRetrieverFactory()
+r = esr.create_retriever()
+# r.add_texts([t.page_content for t in texts])
+docs = r.invoke("Расскажи о Поступлении")
+print(docs[0])
+
+'''model_name = "d0rj/e5-base-en-ru"
 model_kwargs = {'device': 'cpu'}
 encode_kwargs = {'normalize_embeddings': False}
 
@@ -40,8 +47,8 @@ embeddings = MyEmbeddingsModel()
 
 
 db = Chroma.from_documents(texts, embeddings)
-'''docs = db.similarity_search("Расскажи про дополнительные баллы")
-print(docs[0])'''
+# docs = db.similarity_search("Расскажи про дополнительные баллы")
+# print(docs[0])
 
 
 chroma_retriever = db.as_retriever(search_kwargs={"k": 5})
@@ -52,4 +59,4 @@ retriever = EnsembleRetriever(
 docs = retriever.get_relevant_documents("Какие сть курсы для абитуриентов")
 print(docs[0])
 print(docs[1])
-print(docs[2])
+print(docs[2])'''

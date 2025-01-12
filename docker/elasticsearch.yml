@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   elasticsearch:
-    image: elasticsearch:7.16.1
+    image: elasticsearch:8.16.1
     volumes:
       - ./configs/elasticsearch/config.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
       - ./volumes/elasticsearch/data:/usr/share/elasticsearch/data

@@ -1,4 +1,5 @@
-from langchain.retrievers import ElasticSearchBM25Retriever
+from elasticsearch import Elasticsearch
+from langchain.retrievers import ElasticSearchBM25Retriever, BM25Retriever
 
 from src.config import settings
 
@@ -13,7 +14,23 @@ class ElasticSearchRetrieverFactory:
         self._index_name = index_name
 
     def create_retriever(self) -> ElasticSearchBM25Retriever:
-        return ElasticSearchBM25Retriever.create(
-            elasticsearch_url=self._url,
+        return ElasticSearchBM25Retriever(
+            client=Elasticsearch(self._url),
             index_name=self._index_name
         )
+
+
+'''from elasticsearch import Elasticsearch
+
+# Подключение к Elasticsearch
+es = Elasticsearch(settings.es.url)
+
+# Имя индекса, который нужно удалить
+index_name = settings.es.index_name
+
+# Удаление индекса
+if es.indices.exists(index=index_name):
+    es.indices.delete(index=index_name)
+    print(f"Индекс '{index_name}' успешно удалён.")
+else:
+    print(f"Индекс '{index_name}' не существует.")'''
