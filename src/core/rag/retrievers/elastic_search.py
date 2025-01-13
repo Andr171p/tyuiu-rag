@@ -1,22 +1,18 @@
 from elasticsearch import Elasticsearch
-from langchain.retrievers import ElasticSearchBM25Retriever, BM25Retriever
+from langchain.retrievers import ElasticSearchBM25Retriever
 
 from src.config import settings
 
 
-class ElasticSearchRetrieverFactory:
+class ElasticSearchRetriever(ElasticSearchBM25Retriever):
     def __init__(
             self,
-            url: str = settings.es.url,
+            client: Elasticsearch = Elasticsearch(settings.es.url),
             index_name: str = settings.es.index_name
     ) -> None:
-        self._url = url
-        self._index_name = index_name
-
-    def create_retriever(self) -> ElasticSearchBM25Retriever:
-        return ElasticSearchBM25Retriever(
-            client=Elasticsearch(self._url),
-            index_name=self._index_name
+        super().__init__(
+            client=client,
+            index_name=index_name
         )
 
 

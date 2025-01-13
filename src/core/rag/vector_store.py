@@ -3,6 +3,7 @@ from typing import TYPE_CHECKING, Any
 from chromadb import AsyncHttpClient
 from chromadb.config import Settings
 from langchain_community.vectorstores import Chroma
+from langchain_core.vectorstores import VectorStoreRetriever
 
 if TYPE_CHECKING:
     from langchain_core.embeddings import Embeddings
